@@ -10,7 +10,7 @@
 
 **todohunt** finds every `TODO`, `FIXME`, `HACK` and `XXX` comment in your project, groups them by tag, and can tell you how long each one has been sitting there using `git blame`.
 
-## Usage
+## 🚀 Usage
 
 ```bash
 python todohunt.py                  # scan the current folder
@@ -34,7 +34,7 @@ TODO  (5)
 7 item(s) found
 ```
 
-## Use it in CI
+## 📌 Use it in CI
 
 Fail the build if the pile grows past a limit:
 
@@ -44,16 +44,16 @@ python todohunt.py --max 20
 
 Exit code is `1` when more than `--max` items exist, otherwise `0`.
 
-## How it works
+## 🧩 How it works
 
 - Matches a tag right after a comment marker (`#`, `//`, `/*`, `<!--`, `--`, `;`), so words inside strings are mostly ignored.
 - Skips `.git`, `node_modules`, virtualenvs, build folders and binary files.
 - `--age` runs `git blame` once per file that has hits. Files not tracked by git simply show `-`.
 
-## Limits
+## 📌 Limits
 
 Only comments that start with the tag are detected, for example `# TODO: fix` but not `# remember to TODO`. Tags are matched in upper case.
 
-## License
+## 📄 License
 
 MIT
